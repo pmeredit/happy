@@ -18,13 +18,11 @@ import Tree
 
 %%
 
-E :: {Tree ForestId Int}
- : E '+' E   { Plus  $1 $3 }
- | E '-' E   { Minus $1 $3 }
- | E '*' E   { Times $1 $3 }
- | '(' E ')' { Pars  $2 } 
- | i         { Const $1 }
-
+E : E '+' E   {}
+  | E '-' E   {}
+  | E '*' E   {}
+  | '(' E ')' {} 
+  | i         {}
 
 {
 

@@ -20,8 +20,8 @@ This requires CPP / preprocessing; use Hugs.lhs for tests with Hugs
 
 > formatBranches :: [Branch] -> String
 > formatBranches [] = ""
-> formatBranches (br:[]) = show $ b_sem br
-> formatBranches (br:brs) =  show (b_sem br) ++ (if brs == []
+> formatBranches (br:[]) = show $ b_nodes br
+> formatBranches (br:brs) =  show (b_nodes br) ++ (if brs == []
 >                                                then "" 
 >												 else " \\/ " ++ (formatBranches  brs))
 
