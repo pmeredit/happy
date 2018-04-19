@@ -1,13 +1,9 @@
+Arithmetic parsing producing a Abstract Syntax Dag.
 
-Example of arithmetic expression parsing, but producing a labelled
-forest. 
+Only two files are needed here:
 
-Note use of polymorphic type in the labels. See the code more more 
-discussion.
+Expr.y is the parser and lexer
 
-"make run" to run the test case.
-
-For Hugs, load up Hugs.lhs - it is a simplified version of Main, with entry
-point "test :: String -> IO ()"
-
-NOTE: you need the -98 flag on Hugs, owing to non-standard class use
+Main.hs is the main driver of the final executable, it simply takes a string
+inpunt from the command line and calls the paser on it then cleans up the
+output.

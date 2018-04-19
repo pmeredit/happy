@@ -1,7 +1,6 @@
 {
 -- only list imports here
 import Data.Char
-import Tree 
 }
 
 %tokentype { Token }

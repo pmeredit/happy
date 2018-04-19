@@ -3,9 +3,9 @@ include ${TOP}/Makefile.defs
 
 OPT = -O2
 
-expr : Expr.hs Main.lhs
+expr : Expr.hs Main.hs
 	# might want to run happy with --ghc
-	${GHC} -cpp -fglasgow-exts  -o expr --make Main.lhs
+	${GHC} -cpp -fglasgow-exts  -o expr --make Main.hs
 
 run : expr
 	./expr "1+2*4-3"
