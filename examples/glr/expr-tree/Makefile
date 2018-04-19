@@ -26,4 +26,4 @@ err : expr
 test : run eof err
 
 clean :
-	rm -rf expr Expr.info Expr.hs ExprData.hs *.o *.hi out.daVinci
+	rm -rf expr Expr.info Expr.hs ExprData.hs *.o *.hi 
