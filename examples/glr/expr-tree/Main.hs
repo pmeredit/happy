@@ -26,9 +26,13 @@
 -- The main function that calls the parser then the output beautifier
  main
   = do
+  -- read input from commmand line
     (s:o) <- getArgs
     let x = concat o
+  -- this calls the lexer on the input, then turns every token into a list of one token (the map call there), because
+  -- this particular example has no ambiguous tokens.
     case doParse $ map (:[]) $ lexer s of
+  -- these three cases here enumerate the final parse state: Ok, EOF, or Error
       ParseOK r f -> do
                out f
       ParseEOF f  -> do
@@ -36,6 +40,3 @@
                     ++ unlines (map show $ Map.toList f)
       ParseError ts f -> do
                 putStrLn $ "Error: " ++ show ts
-
- forest_lookup f i
-  = fromJust $ Map.lookup f i
